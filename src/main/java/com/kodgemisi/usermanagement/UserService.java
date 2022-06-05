@@ -33,7 +33,8 @@ public class UserService implements UserApi {
 
 	@Override
 	public User update(User user) {
-		return userDao.update(user);
+		userDao.update(user);
+		return userDao.find(user.getId()).get();
 	}
 
 	@Override
