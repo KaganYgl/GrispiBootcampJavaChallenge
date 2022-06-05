@@ -11,10 +11,7 @@ public class Email implements CharSequence {
 
 	public Email(String email) {
 
-		validate(email);
-
-		this.email = email;
-		this.verified = false;
+		this(email,false);
 	}
 
 	public Email(String email, boolean verified) {
